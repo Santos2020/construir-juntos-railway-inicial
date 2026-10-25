@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Do Zero ao Primeiro Cliente: um guia prático de 7 dias para testar uma ideia de pequeno negócio.">
+<title>Construir Juntos — Do Zero ao Primeiro Cliente</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#151e33;--text:#f5f7ff;--muted:#c0c9dc;--accent:#8b7cff;--green:#54d6b0;--line:#303c58}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#27245a 0,transparent 43%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.wrap{width:min(1050px,92%);margin:auto}header{border-bottom:1px solid var(--line);padding:18px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;color:white;text-decoration:none;letter-spacing:.4px}.lang,button{font:inherit;cursor:pointer;border-radius:11px;padding:10px 14px}.lang{border:1px solid var(--line);background:transparent;color:white}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:55px 0 35px}.eyebrow{color:var(--green);font-size:.8rem;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.06;letter-spacing:-1.6px;margin:12px 0 18px}h2{line-height:1.2}p,li{color:var(--muted)}.lead{font-size:1.1rem}.panel,.card{background:linear-gradient(145deg,#19233d,#11192c);border:1px solid var(--line);border-radius:22px;padding:24px}.price{font-size:2.3rem;font-weight:850;margin:8px 0}.section{padding:20px 0 42px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card h3{margin:5px 0}.icon{font-size:1.7rem}.notice{background:#2b2515;border:1px solid #806b3a;color:#f5dca2;border-radius:12px;padding:12px;font-size:.9rem}.formrow{display:grid;gap:8px;margin:16px 0}.formrow label{font-weight:700}.formrow input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b1020;color:white;font:inherit}.paypal-area{min-height:45px;margin-top:14px}.status{font-size:.9rem;color:var(--muted);min-height:26px}.hidden{display:none}footer{border-top:1px solid var(--line);padding:25px 0 35px;font-size:.9rem}.tiny{font-size:.82rem}@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:35px}.grid{grid-template-columns:1fr}.panel{padding:20px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="/">✦ CONSTRUIR JUNTOS</a><button id="langBtn" class="lang" type="button">English</button></div></header>
+<main>
+<section class="wrap hero">
+<div>
+<div class="eyebrow" data-pt="Produto digital • Edição inicial" data-en="Digital product • Starter edition">Produto digital • Edição inicial</div>
+<h1 data-pt="Do Zero ao Primeiro Cliente" data-en="From Zero to Your First Customer">Do Zero ao Primeiro Cliente</h1>
+<p class="lead" data-pt="Um guia prático de 7 dias para tirar uma pequena ideia do papel, conversar com potenciais clientes e testar se existe procura antes de investir muito dinheiro." data-en="A practical 7-day guide to turn a small idea into an offer, speak with potential customers, and test demand before spending much money.">Um guia prático de 7 dias para tirar uma pequena ideia do papel, conversar com potenciais clientes e testar se existe procura antes de investir muito dinheiro.</p>
+<p data-pt="Para quem quer começar pequeno, ouvir o mercado e melhorar a oferta com base em feedback real — sem promessas de renda garantida." data-en="For people who want to start small, listen to the market, and improve an offer with real feedback—without guaranteed-income promises.">Para quem quer começar pequeno, ouvir o mercado e melhorar a oferta com base em feedback real — sem promessas de renda garantida.</p>
+</div>
+<aside class="panel">
+<div class="eyebrow" data-pt="Preço de teste" data-en="Test price">Preço de teste</div>
+<div class="price">US$ 7,90</div>
+<p data-pt="PDF em português e inglês. O valor final, eventuais impostos e taxas serão exibidos antes de ativar as vendas." data-en="PDF in Portuguese and English. Final pricing and any applicable taxes or fees will be confirmed before sales are enabled.">PDF em português e inglês. O valor final, eventuais impostos e taxas serão exibidos antes de ativar as vendas.</p>
+<div class="notice" id="setupNotice" data-pt="Checkout ainda não configurado. Esta página está em preparação e não recebe pagamentos reais." data-en="Checkout is not configured yet. This page is in preparation and does not accept real payments.">Checkout ainda não configurado. Esta página está em preparação e não recebe pagamentos reais.</div>
+<div id="checkout" class="hidden">
+<div class="formrow"><label for="email" data-pt="Seu e-mail para receber os arquivos" data-en="Email to receive your files">Seu e-mail para receber os arquivos</label><input type="email" id="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required></div>
+<div id="paypal-buttons" class="paypal-area"></div>
+<div id="payStatus" class="status" role="status" aria-live="polite"></div>
+<p class="tiny" data-pt="Ao comprar, você concorda com os termos de venda e a política de privacidade do site." data-en="By purchasing, you agree to the site's sales terms and privacy policy.">Ao comprar, você concorda com os termos de venda e a política de privacidade do site.</p>
+</div>
+</aside>
+</section>
+<section class="wrap section" id="conteudo"><h2 data-pt="O que está incluído" data-en="What's included">O que está incluído</h2>
+<div class="grid">
+<article class="card"><div class="icon">🧭</div><h3 data-pt="Plano de 7 dias" data-en="7-day plan">Plano de 7 dias</h3><p data-pt="Uma sequência para escolher um problema, conversar com pessoas e testar uma oferta." data-en="A sequence to choose a problem, talk to people, and test an offer.">Uma sequência para escolher um problema, conversar com pessoas e testar uma oferta.</p></article>
+<article class="card"><div class="icon">📝</div><h3 data-pt="Exercícios práticos" data-en="Practical worksheets">Exercícios práticos</h3><p data-pt="Modelos para definir público, proposta, preço de teste e acompanhar respostas." data-en="Templates to define an audience, offer, test price, and track responses.">Modelos para definir público, proposta, preço de teste e acompanhar respostas.</p></article>
+<article class="card"><div class="icon">🔎</div><h3 data-pt="Validação responsável" data-en="Responsible validation">Validação responsável</h3><p data-pt="Aprenda a testar procura sem prometer lucro garantido ou resultados fáceis." data-en="Learn to test demand without promising guaranteed profit or easy results.">Aprenda a testar procura sem prometer lucro garantido ou resultados fáceis.</p></article>
+</div></section>
+<section class="wrap section"><h2 data-pt="Para quem é" data-en="Who it's for">Para quem é</h2>
+<ul><li data-pt="Quem tem uma ideia de pequeno negócio e quer começar com baixo custo." data-en="People with a small-business idea who want to start with low costs.">Quem tem uma ideia de pequeno negócio e quer começar com baixo custo.</li><li data-pt="Quem quer ouvir potenciais clientes antes de investir em estoque ou ferramentas caras." data-en="People who want feedback before investing in inventory or expensive tools.">Quem quer ouvir potenciais clientes antes de investir em estoque ou ferramentas caras.</li><li data-pt="Quem precisa de um roteiro inicial e uma forma simples de medir aprendizado." data-en="People who need a starter roadmap and a simple way to measure learning.">Quem precisa de um roteiro inicial e uma forma simples de medir aprendizado.</li></ul>
+<p class="tiny" data-pt="Material educativo. Não garante vendas, renda ou sucesso comercial. Os resultados dependem do mercado, da execução e de fatores individuais." data-en="Educational material. It does not guarantee sales, income, or business success. Results depend on the market, execution, and individual circumstances.">Material educativo. Não garante vendas, renda ou sucesso comercial. Os resultados dependem do mercado, da execução e de fatores individuais.</p>
+</section>
+</main>
+<footer><div class="wrap"><strong>CONSTRUIR JUNTOS</strong><p data-pt="Projeto independente em fase inicial. Antes das vendas, o responsável deverá preencher e publicar contato de suporte, termos de venda, política de privacidade e regras de reembolso." data-en="Independent early-stage project. Before sales, the owner must publish support contact details, sales terms, privacy policy, and refund rules.">Projeto independente em fase inicial. Antes das vendas, o responsável deverá preencher e publicar contato de suporte, termos de venda, política de privacidade e regras de reembolso.</p><span>© <span id="year"></span> Construir Juntos</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+let english=false;
+document.getElementById('langBtn').addEventListener('click',()=>{english=!english;document.documentElement.lang=english?'en':'pt-BR';document.getElementById('langBtn').textContent=english?'Português':'English';document.querySelectorAll('[data-pt][data-en]').forEach(el=>{if(el.id==='setupNotice'&&!document.getElementById('checkout').classList.contains('hidden'))return;el.textContent=el.dataset[english?'en':'pt'];});});
+(async()=>{
+ try{
+  const r=await fetch('/api/config');const cfg=await r.json();
+  if(!cfg.configured||!cfg.clientId)return;
+  const script=document.createElement('script');
+  script.src='https://www.paypal.com/sdk/js?client-id='+encodeURIComponent(cfg.clientId)+'&currency=USD&intent=capture';
+  script.onload=()=>{
+    document.getElementById('setupNotice').classList.add('hidden');
+    document.getElementById('checkout').classList.remove('hidden');
+    paypal.Buttons({
+      createOrder:async()=>{
+        const email=document.getElementById('email').value.trim();
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById('payStatus').textContent=english?'Enter a valid email first.':'Informe um e-mail válido antes de continuar.';throw new Error('Valid email required');}
+        const res=await fetch('/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+        const data=await res.json();if(!res.ok)throw new Error(data.error||'Could not create order');return data.id;
+      },
+      onApprove:async(data)=>{
+        document.getElementById('payStatus').textContent=english?'Confirming payment…':'Confirmando pagamento…';
+        const res=await fetch('/api/orders/'+encodeURIComponent(data.orderID)+'/capture',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+        const result=await res.json();
+        document.getElementById('payStatus').textContent=result.message||(res.ok?(english?'Payment confirmed.':'Pagamento confirmado.'):(english?'Could not confirm payment.':'Não foi possível confirmar o pagamento.'));
+      },
+      onError:()=>{document.getElementById('payStatus').textContent=english?'Checkout error. Please try again later.':'Erro no checkout. Tente novamente mais tarde.';}
+    }).render('#paypal-buttons');
+  };
+  script.onerror=()=>{document.getElementById('payStatus').textContent=english?'Could not load PayPal.':'Não foi possível carregar o PayPal.';};
+  document.head.appendChild(script);
+ }catch(e){console.warn('Checkout is not configured yet.');}
+})();
+</script>
+</body></html>
